@@ -1,0 +1,32 @@
+### Register (Buat Akun + Authentication)
+POST http://localhost:3000/api/v1/auth/register
+Content-Type: application/json
+
+{
+    "name": "pikri",
+    "email": "syofian.fikri@gmail.com",
+    "password": "1234",
+    "password_confirmation": "1234"
+}
+
+### Login
+POST http://localhost:3000/api/v1/auth/login
+Content-Type: application/json
+
+{
+    "email": "syofian.fikri@gmail.com",
+    "password": "1234"
+
+}
+
+### Token
+GET http://localhost:3000/api/v1/auth/whoami
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsImlhdCI6MTcwMDQxMTU2OH0.aazQk5S_WkB_dfsQwalFQ-BKWzN0ceHOUR-fgOv4D54
+
+### Forget Password
+POST http://localhost:3000/api/v1/auth/forget-password
+Content-Type: application/json
+
+{
+    "email": "syofian.fikri@gmail.com"
+}
